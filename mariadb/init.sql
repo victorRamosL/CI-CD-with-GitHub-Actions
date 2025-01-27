@@ -1,0 +1,4 @@
+CREATE DATABASE github;
+CREATE USER 'frodo'@'%' IDENTIFIED BY 'bolson';
+GRANT ALL PRIVILEGES ON github.* TO 'frodo'@'%';
+FLUSH PRIVILEGES;
