@@ -21,17 +21,17 @@ jobs:
 
     - name: Build and push Nginx image
       run: |
-        docker build -t victorramosl/nginx:latest /nginx
+        docker build -t victorramosl/nginx:latest ./nginx
         docker push victorramosl/nginx:latest
 
     - name: Build and push MariaDB image
       run: |
-        docker build -t victorramosl/mariadb:latest /mariadb
+        docker build -t victorramosl/mariadb:latest ./mariadb
         docker push victorramosl/mariadb:latest
 
     - name: Build and push Wazuh image
       run: |
-        docker build -t victorramosl/wazuh-manager:latest /wazuh
+        docker build -t victorramosl/wazuh-manager:latest ./wazuh
         docker push victorramosl/wazuh-manager:latest
     - name: Deploy to server via SSH
       uses: appleboy/ssh-action@v0.1.8
